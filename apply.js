@@ -16,11 +16,19 @@ client.on('message', async message => {
 
 
     let questions = {
-        firstQuestion: "Are you familiar with Github ?  ``Yes/No``",
-        secondQuestion: "How long are you online a day ?",
-        thirdQuestion: "When you get stuck on a problem, what do you do ?",
+        firstQuestion: "What is your Timezone?",
+        secondQuestion: "How much free time do you have in your current schedule",
+        thirdQuestion: "Why do you participate in the server",
         fourthQuestion: "How old are you ?",
-        fifthQuestion: "Are you ready to work in a team and move it forward in a meaningful way ?  ``Yes/No``",
+        fifthQuestion: "What made you decide to apply to become a moderator",
+        sixthQuestion: "How should a moderator behave in the server?",
+        seventhQuestion: "Why do we need you on our moderation team",
+        eighthQuestion: "What does a moderator do?",
+        ninthQuestion: "What are you like as a person?",
+        tenthQuestion: "Are you willing to put aside all personal relationships to avoid bias whilst moderating",
+        tenthQuestion: "Without too much detail, suggest an improvement which could be made to the discord server.",
+        
+        
     }
 
 
@@ -64,8 +72,56 @@ client.on('message', async message => {
                                             msg.channel.awaitMessages(filter1, {
                                                 time: 5 * 60000,
                                                 max: 1
+                                    }).then(messages => {
+                                        let msg5 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1
+                                    }).then(messages => {
+                                        let msg6 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1
+                                    }).then(messages => {
+                                        let msg7 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1  
+                                    }).then(messages => {
+                                        let msg8 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1
+                                    }).then(messages => {
+                                        let msg9 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1
+                                    }).then(messages => {
+                                        let msg10 = messages.first().content
+                                        if(msg4.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
+                                        message.author.send(questions.fifthQuestion).then(msg => {
+                                            const filter1 = m => m.author.id === message.author.id
+                                            msg.channel.awaitMessages(filter1, {
+                                                time: 5 * 60000,
+                                                max: 1
                                             }).then(messages => {
-                                                let msg5 = messages.first().content
+                                                let msg11 = messages.first().content
                                                 if(msg5.toLowerCase() === "cancel") return message.author.send("Ok, I have cancelled this process")
                                                 message.author.send("Subbmitted application! ``made by captain motchy``").then(msg => {
                                                     message.client.channels.cache.get(config.applicationChannel).send(
@@ -77,6 +133,12 @@ client.on('message', async message => {
                                                             .addField(questions.thirdQuestion, "Answer: " + msg3)
                                                             .addField(questions.fourthQuestion, "Answer: " + msg4)
                                                             .addField(questions.fifthQuestion, "Answer: " + msg5)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg6)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg7)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg8)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg9)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg10)
+                                                            .addField(questions.fifthQuestion, "Answer: " + msg11)
                                                     )
                                                 })
                                             })
